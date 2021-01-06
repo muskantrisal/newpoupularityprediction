@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body style="background-image: url(static/cool-background-white.png)">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<a class="navbar-brand" href="#">News Popularity Predictor</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		  <div class="navbar-nav">
+			<a style="color: black;" class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+			<a style="color: black;" class="nav-item nav-link" href="static/Functionality.html">Functionality</a>
+		  </div>
+		</div>
+	  </nav>
+	<div class="results">
+	<h2 style="text-align: center;margin-top: 10%;">{{prediction}}</h2>	
+	</div>
+	<a href="/"><h4 style="text-align: center;margin-top: 10%; color: black;">Predict Again</button></h4>
+</body>
+</html>

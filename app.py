@@ -10,7 +10,7 @@ filename = 'newsPrediction_pickle.pkl'
 clf = joblib.load(open(filename, 'rb'))
 
 app = Flask(__name__)
-@app.route('/',methods=['GET','POST'])
+@app.route('/')
 
 def home():
 	return render_template('home.html')
@@ -20,7 +20,6 @@ def predict():
     if request.method == 'POST':
         message = request.form['message']
         news_data = required_details(message)
-        print(news_data)
         data=pd.DataFrame(news_data)
         data=data.transpose()
         data.columns =[' n_tokens_title',' n_tokens_content',' n_unique_tokens',' n_non_stop_unique_tokens',
